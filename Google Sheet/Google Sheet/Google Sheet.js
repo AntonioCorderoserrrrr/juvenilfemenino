@@ -9,3 +9,7 @@ form.addEventListener('submit', e => {
   .then(() => { window.location.reload(); })
   .catch(error => console.error('Error!', error.message))
 })
+const config = {
+  API_KEY: 'AIzaSyBRtVIPhczyyNszrgsIRa2seA1_ua_NF9o',
+  SPREADSHEET_ID: '1YUqcv_bFYKBhN1qdeDCR4_ABBvKmqqHve2vobLuoTe4'
+};

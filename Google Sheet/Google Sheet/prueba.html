@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario que envía a Google Forms</title>
+</head>
+<body>
+    <h2>Formulario de contacto</h2>
+    <form id="contactForm">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="entry.14428651" required><br><br>
+        
+        <label for="email">Email:</label>
+        <input type="number" id="email" name="entry.1799328526" required><br><br>
+        
+        <label for="email">Email:</label>
+        <input type="tel" id="pepe" name="entry.250966606" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="number" id="manolo" name="entry.1699589820" required><br><br>
+
+        <label for="mensaje">Mensaje:</label><br>
+        <textarea id="mensaje" name="entry.1726344900" rows="4" required></textarea><br><br>
+        
+        <button type="submit">Enviar</button>
+    </form>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            enviarRespuestaAGoogleForms(this);
+        });
+
+        function enviarRespuestaAGoogleForms(formulario) {
+            var formData = new FormData(formulario);
+            var url = 'https://forms.gle/Li2Wqh91mKcb3wDc8'; // Reemplaza con el enlace de tu formulario de Google Forms
+
+            fetch(url, {
+                method: 'POST',
+                body: formData,
+                mode: 'no-cors'
+            })
+            .then(response => {
+                console.log('Respuesta enviada correctamente a Google Forms');
+                formulario.reset();
+            })
+            .catch(error => {
+                console.error('Hubo un error al enviar la respuesta a Google Forms', error);
+            });
+        }
+    </script>
+</body>
+</html>
