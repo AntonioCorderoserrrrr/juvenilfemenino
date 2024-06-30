@@ -287,6 +287,37 @@ footer p {
     margin-right: 1em;
 }
 
+/* Estilos para la sección de patrocinadores */
+#patrocinadores {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.patrocinador-grid {
+    display: flex;
+    justify-content: space-around; /* Alinear los patrocinadores alrededor */
+    align-items: center;
+    flex-wrap: wrap; /* Permitir que los elementos se envuelvan en líneas */
+    gap: 20px; /* Espacio entre los patrocinadores */
+}
+
+.patrocinador {
+    flex: 0 0 auto; /* Evitar que los elementos se hagan más grandes */
+    max-width: 200px; /* Tamaño máximo de cada patrocinador */
+}
+
+.patrocinador img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.patrocinador img:hover {
+    transform: scale(1.05);
+}
+
 /* Estilos responsivos */
 @media (max-width: 1200px) {
     .slider-container {
