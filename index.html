@@ -10,33 +10,33 @@
     <script src="scripts.js"></script>
     <script>
         window.onload = function() {
-    loadLanguage();
-    checkVisibility();
-};
+            loadLanguage();
+            checkVisibility();
+        };
 
-// Función para comprobar la visibilidad de los elementos
-window.onscroll = checkVisibility;
+        // Función para comprobar la visibilidad de los elementos
+        window.onscroll = checkVisibility;
 
-function checkVisibility() {
-    var sections = document.querySelectorAll('main section');
-    var footer = document.querySelector('footer');
-    var windowHeight = window.innerHeight;
+        function checkVisibility() {
+            var sections = document.querySelectorAll('main section');
+            var footer = document.querySelector('footer');
+            var windowHeight = window.innerHeight;
 
-    sections.forEach(function(section) {
-        var rect = section.getBoundingClientRect();
-        if (rect.top < windowHeight && !section.classList.contains('visible')) {
-            section.classList.add('visible');
-        } else if (rect.top >= windowHeight && section.classList.contains('visible')) {
-            section.classList.remove('visible');
+            sections.forEach(function(section) {
+                var rect = section.getBoundingClientRect();
+                if (rect.top < windowHeight && !section.classList.contains('visible')) {
+                    section.classList.add('visible');
+                } else if (rect.top >= windowHeight && section.classList.contains('visible')) {
+                    section.classList.remove('visible');
+                }
+            });
+
+            // Asegúrate de que el footer no tenga la clase 'visible'
+            var rectFooter = footer.getBoundingClientRect();
+            if (rectFooter.top < windowHeight && footer.classList.contains('visible')) {
+                footer.classList.remove('visible');
+            }
         }
-    });
-
-    // Asegúrate de que el footer no tenga la clase 'visible'
-    var rectFooter = footer.getBoundingClientRect();
-    if (rectFooter.top < windowHeight && footer.classList.contains('visible')) {
-        footer.classList.remove('visible');
-    }
-}
 
     </script>
 </head>
@@ -84,127 +84,127 @@ function checkVisibility() {
         <section id="equipo">
             <h2>Nuestro Equipo</h2>
             <div class="player-grid" id="team-grid">
-                <div class="player-card">
+                <div class="player-card animate">
                     <img src="fotos/vertical.jpg" alt="Jugador">
                     <h3>Nono Guerrero</h3>
                     <p>Entrenador</p>
                 </div>
-                <div class="player-card">
+                <div class="player-card animate">
                     <img src="fotos/vertical.jpg" alt="Jugador">
                     <h3>Antonio Cordero</h3>
                     <p>Segundo Entrenador</p>
                 </div>
-                <div class="player-card">
+                <div class="player-card animate">
                     <img src="fotos/vertical.jpg" alt="Jugador">
                     <h3>Juanma García</h3>
                     <p>Preparador Físico</p>
                 </div>
-                <div class="player-card">
+                <div class="player-card animate">
                     <img src="fotos/vertical.jpg" alt="Jugador">
                     <h3>Nombre Jugadora 1</h3>
                     <p>Posición</p>
                 </div>
-                <div class="player-card">
+                <div class="player-card animate">
                     <img src="fotos/vertical.jpg" alt="Jugador">
                     <h3>Nombre Jugadora 2</h3>
                     <p>Posición</p>
                 </div>
-                <div class="player-card">
+                <div class="player-card animate">
                     <img src="fotos/vertical.jpg" alt="Jugador">
                     <h3>Nombre Jugadora 3</h3>
                     <p>Posición</p>
                 </div>
-                <div class="player-card">
+                <div class="player-card animate">
                     <img src="fotos/vertical.jpg" alt="Jugador">
                     <h3>Nombre Jugadora 4</h3>
                     <p>Posición</p>
                 </div>
-                <div class="player-card">
+                <div class="player-card animate">
                     <img src="fotos/vertical.jpg" alt="Jugador">
                     <h3>Nombre Jugadora 5</h3>
                     <p>Posición</p>
                 </div>
-                <div class="player-card">
+                <div class="player-card animate">
                     <img src="fotos/vertical.jpg" alt="Jugador">
                     <h3>Nombre Jugadora 6</h3>
                     <p>Posición</p>
                 </div>
-                <div class="player-card">
+                <div class="player-card animate">
                     <img src="fotos/vertical.jpg" alt="Jugador">
                     <h3>Nombre Jugadora 7</h3>
                     <p>Posición</p>
                 </div>
-                <div class="player-card">
+                <div class="player-card animate">
                     <img src="fotos/vertical.jpg" alt="Jugador">
                     <h3>Nombre Jugadora 8</h3>
                     <p>Posición</p>
                 </div>
-                <div class="player-card">
+                <div class="player-card animate">
                     <img src="fotos/vertical.jpg" alt="Jugador">
                     <h3>Nombre Jugadora 9</h3>
                     <p>Posición</p>
                 </div>
-                <div class="player-card">
+                <div class="player-card animate">
                     <img src="fotos/vertical.jpg" alt="Jugador">
                     <h3>Nombre Jugadora 10</h3>
                     <p>Posición</p>
                 </div>
-                <div class="player-card">
+                <div class="player-card animate">
                     <img src="fotos/vertical.jpg" alt="Jugador">
                     <h3>Nombre Jugadora 11</h3>
                     <p>Posición</p>
                 </div>
-                <div class="player-card">
+                <div class="player-card animate">
                     <img src="fotos/vertical.jpg" alt="Jugador">
                     <h3>Nombre Jugadora 12</h3>
                     <p>Posición</p>
                 </div>
-                <div class="player-card">
+                <div class="player-card animate">
                     <img src="fotos/vertical.jpg" alt="Jugador">
                     <h3>Nombre Jugadora 13</h3>
                     <p>Posición</p>
                 </div>
-                <div class="player-card">
+                <div class="player-card animate">
                     <img src="fotos/vertical.jpg" alt="Jugador">
                     <h3>Nombre Jugadora 14</h3>
                     <p>Posición</p>
                 </div>
-                <div class="player-card">
+                <div class="player-card animate">
                     <img src="fotos/vertical.jpg" alt="Jugador">
                     <h3>Nombre Jugadora 15</h3>
                     <p>Posición</p>
                 </div>
-                <div class="player-card">
+                <div class="player-card animate">
                     <img src="fotos/vertical.jpg" alt="Jugador">
                     <h3>Nombre Jugadora 16</h3>
                     <p>Posición</p>
                 </div>
-                <div class="player-card">
+                <div class="player-card animate">
                     <img src="fotos/vertical.jpg" alt="Jugador">
                     <h3>Nombre Jugadora 17</h3>
                     <p>Posición</p>
                 </div>
-                <div class="player-card">
+                <div class="player-card animate">
                     <img src="fotos/vertical.jpg" alt="Jugador">
                     <h3>Nombre Jugadora 18</h3>
                     <p>Posición</p>
                 </div>
-                <div class="player-card">
+                <div class="player-card animate">
                     <img src="fotos/vertical.jpg" alt="Jugador">
                     <h3>Nombre Jugadora 19</h3>
                     <p>Posición</p>
                 </div>
-                <div class="player-card">
+                <div class="player-card animate">
                     <img src="fotos/vertical.jpg" alt="Jugador">
                     <h3>Nombre Jugadora 20</h3>
                     <p>Posición</p>
                 </div>
-                <div class="player-card">
+                <div class="player-card animate">
                     <img src="fotos/vertical.jpg" alt="Jugador">
                     <h3>Nombre Jugadora 21</h3>
                     <p>Posición</p>
                 </div>
-                <div class="player-card">
+                <div class="player-card animate">
                     <img src="fotos/vertical.jpg" alt="Jugador">
                     <h3>Nombre Jugadora 22</h3>
                     <p>Posición</p>

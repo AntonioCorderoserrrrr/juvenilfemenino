@@ -42,6 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener("DOMContentLoaded", function () {
     const elements = document.querySelectorAll("header, section, footer");
+    const playerCards = document.querySelectorAll("#equipo .player-card");
 
     function checkVisibility() {
         elements.forEach(element => {
@@ -52,9 +53,25 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    function checkVisibilityCartas() {
+        playerCards.forEach(card => {
+            const rect = card.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom >= 0 && !card.classList.contains("animate")) {
+                card.classList.add("animate");
+            }
+        });
+    }
+
     window.addEventListener("scroll", checkVisibility);
     window.addEventListener("resize", checkVisibility);
 
     // Trigger the check once when the DOM is loaded
     checkVisibility();
+    checkVisibilityCartas();
 });
+
+
+
+
+
+    

@@ -140,6 +140,17 @@ section h2 {
     color: #5cd1ff;
 }
 
+.player-card {
+    /* Estilos base de la tarjeta */
+    transition: transform 0.3s ease;
+}
+
+.player-card.animate {
+    /* Estilo adicional para animación */
+    transform: translateY(0);
+    opacity: 1;
+}
+
 form {
     display: flex;
     flex-direction: column;
