@@ -38,3 +38,23 @@ setInterval(autoSlide, 1800);
 document.addEventListener('DOMContentLoaded', () => {
     showSlide('galeria', 0);
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const elements = document.querySelectorAll("header, section, footer");
+
+    function checkVisibility() {
+        elements.forEach(element => {
+            const rect = element.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                element.classList.add("visible");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", checkVisibility);
+    window.addEventListener("resize", checkVisibility);
+
+    // Trigger the check once when the DOM is loaded
+    checkVisibility();
+});
