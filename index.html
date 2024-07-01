@@ -8,6 +8,37 @@
     <link rel="icon" href="fotos/escudo.png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <script src="scripts.js"></script>
+    <script>
+        window.onload = function() {
+    loadLanguage();
+    checkVisibility();
+};
+
+// Función para comprobar la visibilidad de los elementos
+window.onscroll = checkVisibility;
+
+function checkVisibility() {
+    var sections = document.querySelectorAll('main section');
+    var footer = document.querySelector('footer');
+    var windowHeight = window.innerHeight;
+
+    sections.forEach(function(section) {
+        var rect = section.getBoundingClientRect();
+        if (rect.top < windowHeight && !section.classList.contains('visible')) {
+            section.classList.add('visible');
+        } else if (rect.top >= windowHeight && section.classList.contains('visible')) {
+            section.classList.remove('visible');
+        }
+    });
+
+    // Asegúrate de que el footer no tenga la clase 'visible'
+    var rectFooter = footer.getBoundingClientRect();
+    if (rectFooter.top < windowHeight && footer.classList.contains('visible')) {
+        footer.classList.remove('visible');
+    }
+}
+
+    </script>
 </head>
 <body>
     <header>
