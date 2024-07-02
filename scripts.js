@@ -39,7 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
     showSlide('galeria', 0);
 });
 
-
 document.addEventListener("DOMContentLoaded", function () {
     const elements = document.querySelectorAll("header, section, footer");
     const playerCards = document.querySelectorAll("#equipo .player-card");
@@ -70,8 +69,36 @@ document.addEventListener("DOMContentLoaded", function () {
     checkVisibilityCartas();
 });
 
+window.onload = function() {
+    // Agregar la clase fade-in al header y a la sección intro-section
+    document.querySelector('header').classList.add('fade-in');
+    document.querySelector('.intro-section').classList.add('fade-in');
+    // Agregar la clase hidden a todas las demás secciones
+    var sections = document.querySelectorAll('main section:not(.intro-section)');
+    sections.forEach(function(section) {
+        section.classList.add('hidden');
+    });
+    checkVisibility();
+};
 
+// Función para comprobar la visibilidad de los elementos
+function checkVisibility() {
+    var sections = document.querySelectorAll('main section');
+    var footer = document.querySelector('footer');
+    var windowHeight = window.innerHeight;
 
+    sections.forEach(function(section) {
+        var rect = section.getBoundingClientRect();
+        if (rect.top < windowHeight && section.classList.contains('hidden')) {
+            section.classList.remove('hidden');
+            section.classList.add('visible');
+        }
+    });
 
-
-    
+    // Asegúrate de que el footer no tenga la clase 'hidden'
+    var rectFooter = footer.getBoundingClientRect();
+    if (rectFooter.top < windowHeight && footer.classList.contains('hidden')) {
+        footer.classList.remove('hidden');
+        footer.classList.add('visible');
+    }
+}
