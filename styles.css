@@ -320,7 +320,7 @@ footer p {
     justify-content: space-around; /* Alinear los patrocinadores alrededor */
     align-items: center;
     flex-wrap: wrap; /* Permitir que los elementos se envuelvan en líneas */
-    gap: 20px; /* Espacio entre los patrocinadores */
+    gap: 2px; /* Espacio entre los patrocinadores */
 }
 
 .patrocinador {
