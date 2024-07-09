@@ -311,7 +311,6 @@ footer p {
 
 /* Estilos para la sección de patrocinadores */
 #patrocinadores {
-    padding: 50px 0;
     text-align: center;
 }
 
@@ -325,7 +324,7 @@ footer p {
 }
 
 .patrocinador {
-    max-width: 200px; /* Tamaño máimo de cada patrocinador */
+    max-width: 150px; /* Tamaño máimo de cada patrocinador */
     margin: 0 1px; /* Ajusta el margen izquierdo y derecho */
 }
 
