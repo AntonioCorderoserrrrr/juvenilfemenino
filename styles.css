@@ -1,3 +1,24 @@
+/* Estilo para la animación de aparición */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+.hidden {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.visible {
+    opacity: 1;
+    transition: opacity 1s;
+}
+
 header, section, footer {
     opacity: 0;
     transform: translateY(100px);
@@ -457,5 +478,14 @@ footer p {
         max-width: 700px;
         max-height: 450px;
         margin-bottom: 1em;
+    }
+
+    nav ul {
+        flex-wrap: wrap; /* Permitir que los elementos se envuelvan en múltiples líneas */
+    }
+
+    nav ul li {
+        width: calc(33.33% - 20px); /* Ajustar el ancho para mostrar tres elementos por línea */
+        margin-right: 10px; /* Añadir espacio entre elementos */
     }
 }
